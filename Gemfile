@@ -35,14 +35,14 @@ gem 'rollbar'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'brakeman'
+  gem 'bundler-audit'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'minitest-power_assert'
   gem 'rubocop-rails', require: false
   gem 'slim_lint', '= 0.22.0'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
-  gem 'bundler-audit'
-  gem 'brakeman'
 end
 
 group :development do

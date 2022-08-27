@@ -20,15 +20,9 @@ db-reset:
 start:
 	heroku local -p 3000
 
-lint: lint-code lint-style
-
-lint-code:
+lint:
 	bundle exec rubocop
 	bundle exec slim-lint app/views/
-	# TODO: add eslint
-
-lint-style:
-	npx stylelint "**/*.scss" "!**/vendor/**"
 
 linter-code-fix:
 	bundle exec rubocop -A
