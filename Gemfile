@@ -41,6 +41,8 @@ group :development, :test do
   gem 'slim_lint', '= 0.22.0'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
+  gem 'bundler-audit'
+  gem 'brakeman'
 end
 
 group :development do
