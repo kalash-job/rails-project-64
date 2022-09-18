@@ -5,28 +5,36 @@ en:
         title: Title
       index:
         all_posts: All posts
+        author: Author
+        collective_blog: Collective blog
         comments_count:
           zero: No comments
           one: "%{count} comment"
           other: "%{count} comments"
         create: New Post
+        created: Created
+        liked: Liked
         show: Show
         edit: Edit
         destroy: Destroy
         confirm: Are you sure?
         posts: Posts
+        title: Title
       create:
         failure: Post was not created.
         success: Post was created.
       destroy:
         success: Post was destroyed.
       new:
+        reset: Reset
         title: New Post
       show:
+        all_posts: All posts
         author: Author
         comments: Comments
         created: Created
         body: Content
+        title: Title
       update:
         success: Post was updated.
       comments:

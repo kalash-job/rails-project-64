@@ -1,4 +1,7 @@
 en:
+  errors:
+    messages:
+      not_saved:
   attributes:
     email: Email
     password: Password

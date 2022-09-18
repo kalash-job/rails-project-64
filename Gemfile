@@ -60,6 +60,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'html2slim'
   gem 'i18n-debug'
+  gem 'i18n-tasks', '~> 1.0.12'
   gem 'spring'
 end
 

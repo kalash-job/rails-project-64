@@ -6,6 +6,8 @@ ru:
         title: Название
       index:
         all_posts: Все посты
+        author: Автор
+        collective_blog: Коллективный блог
         comments_count:
           zero: нет комментариев
           one: "%{count} комментарий"
@@ -13,23 +15,29 @@ ru:
           many: "%{count} комментариев"
           other: "%{count} комментариев"
         create: Новый пост
+        created: Создан
+        liked: Понравилось
         show: Смотреть
         edit: Редактировать
         destroy: Удалить
         confirm: Вы уверены?
         posts: Посты
+        title: Название
       create:
         failure: Пост не был создан.
         success: Пост создан.
       destroy:
         success: Пост удален.
       new:
+        reset: Очистить
         title: Новый пост
       show:
+        all_posts: Все посты
         author: Автор
         comments: Комментарии
         created: Создан
         body: Содержимое
+        title: Название
       update:
         success: Пост обновлен.
       comments:
