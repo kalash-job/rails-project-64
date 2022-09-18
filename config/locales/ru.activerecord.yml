@@ -1,0 +1,32 @@
+ru:
+  activerecord:
+    models:
+      post: Пост
+      post/comment: Комментарий
+
+    attributes:
+      post:
+        body: Содержимое
+        title: Название
+      post/comment:
+        body: Текст комментария
+
+    errors:
+      models:
+        post:
+          attributes:
+            body:
+              too_short: Содержимое слишком короткое
+            category:
+              required: Категория не может отсутствовать
+            title:
+              blank: Заголовок не может быть пустым
+        user:
+          attributes:
+            email:
+              blank: не может быть пустым
+              taken: уже существует
+            password:
+              blank: не может быть пустым
+            password_confirmation:
+              confirmation: Подтверждение пароля не совпадает со значением поля Пароль

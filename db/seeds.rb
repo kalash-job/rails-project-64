@@ -1,8 +1,27 @@
 # frozen_string_literal: true
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+CATEGORIES = %w[js php python ruby c#].freeze
+
+CATEGORIES.each do |c|
+  category = Category.create(name: c)
+  Rails.logger.debug { "Add category #{category.name}" }
+end
+
+10.times do |_index|
+  password = Faker::Internet.password
+  user = User.new(email: Faker::Internet.unique.email, password: password, password_confirmation: password)
+  user.save!
+end
+
+20.times do |index|
+  post = Post.new(
+    title: Faker::Lorem.sentence,
+    body: Faker::Lorem.sentences.join(' ')
+  )
+  user = User.all.sample
+  post.creator = user
+  category = Category.all.sample
+  post.category = category
+  post.save!
+  Rails.logger.debug { "Add post number #{index + 1} - #{post.title}" }
+end

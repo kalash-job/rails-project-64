@@ -1,0 +1,11 @@
+one:
+  title: one
+  body: First body
+  creator: one
+  category: one
+
+two:
+  title: two
+  body: Second body
+  creator: two
+  category: two

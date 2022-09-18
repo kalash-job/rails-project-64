@@ -1,4 +1,4 @@
-test:
+tests:
 	bin/rails test
 
 setup:

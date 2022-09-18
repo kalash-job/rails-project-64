@@ -1,0 +1,47 @@
+ru:
+  attributes:
+    email: Электронная почта
+    password: Пароль
+    password_confirmation: Подтверждение пароля
+    remember_me: Запомнить меня
+    user:
+      email: Электронная почта
+      password_confirmation: Подтверждение пароля
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        zero: "%{count} часов"
+        one: "%{count} час"
+        few: "%{count} часа"
+        many: "%{count} часов"
+        other: "%{count} часов"
+      less_than_x_minutes:
+        zero: "%{count} минут"
+        one: "%{count} минута"
+        few: "%{count} минуты"
+        many: "%{count} минут"
+        other: "%{count} минут"
+      x_days:
+        zero: "%{count} дней"
+        one: "%{count} день"
+        few: "%{count} дня"
+        many: "%{count} дней"
+        other: "%{count} дней"
+      x_minutes:
+        zero: "%{count} минут"
+        one: "%{count} минута"
+        few: "%{count} минуты"
+        many: "%{count} минут"
+        other: "%{count} минут"
+  layouts:
+    application:
+      hexlet_title: "© Хекслет, %{year}"
+      title: Коллективный блог
+    shared:
+      nav:
+        add_post: Добавить статью
+        hexlet_logo: Хекслет
+        home: Главная
+        registration: Регистрация
+        sign_out: Выйти
+        sign_in: Войти

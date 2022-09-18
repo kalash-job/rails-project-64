@@ -1,0 +1,31 @@
+en:
+  activerecord:
+    models:
+      post: Post
+      post/comment: Comment
+    attributes:
+      post:
+        body: Content
+        title: Title
+      post/comment:
+        body: Text of comment
+
+    errors:
+      models:
+        post:
+          attributes:
+            body:
+              too_short: Content is too short
+            category:
+              required: Category is required
+            title:
+              blank: Title can not be empty
+        user:
+          attributes:
+            email:
+              blank: can not be empty
+              taken: has already been taken
+            password:
+              blank: can not be empty
+            password_confirmation:
+              confirmation: Password confirmation value must be equal to Password value

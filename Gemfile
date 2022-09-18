@@ -35,6 +35,8 @@ gem 'devise'
 
 gem 'faker'
 
+gem 'i18n'
+
 gem 'rollbar'
 
 group :development, :test do
@@ -57,6 +59,7 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'html2slim'
+  gem 'i18n-debug'
   gem 'spring'
 end
 
