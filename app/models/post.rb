@@ -3,6 +3,7 @@
 class Post < ApplicationRecord
   belongs_to :category, inverse_of: 'posts'
   belongs_to :creator, class_name: 'User', inverse_of: 'posts', foreign_key: 'user_id'
+  has_many :comments, class_name: 'PostComment', inverse_of: 'post', dependent: :destroy
 
   validates :title, presence: true
   validates :body, length: { maximum: 1000, minimum: 50 }

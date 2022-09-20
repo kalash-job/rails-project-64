@@ -4,6 +4,8 @@ ru:
     posts:
       edit:
         title: Название
+      form:
+        reset: Очистить
       index:
         all_posts: Все посты
         author: Автор
@@ -29,11 +31,11 @@ ru:
       destroy:
         success: Пост удален.
       new:
-        reset: Очистить
         title: Новый пост
       show:
         all_posts: Все посты
         author: Автор
+        comment: Комментарий
         comments: Комментарии
         created: Создан
         body: Содержимое

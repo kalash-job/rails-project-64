@@ -3,6 +3,8 @@ en:
     posts:
       edit:
         title: Title
+      form:
+        reset: Reset
       index:
         all_posts: All posts
         author: Author
@@ -26,11 +28,11 @@ en:
       destroy:
         success: Post was destroyed.
       new:
-        reset: Reset
         title: New Post
       show:
         all_posts: All posts
         author: Author
+        comment: Comment
         comments: Comments
         created: Created
         body: Content

@@ -16,3 +16,4 @@ h2 = t('.posts')
             span.me-2 == "#{t('.liked')}: 1 | "
             span.me-2 == "#{t('.created')}: #{time_ago_in_words post.created_at} | "
             span.me-2 == "#{t('.author')}: #{post.creator.email}"
+            span.me-2 == "Комментариев: #{post.comments.count}"
