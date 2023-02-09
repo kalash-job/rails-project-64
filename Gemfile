@@ -56,6 +56,8 @@ gem 'sentry-rails'
 
 gem 'sentry-ruby'
 
+gem 'simple_form'
+
 gem 'slim_lint'
 
 gem 'slim-rails'
