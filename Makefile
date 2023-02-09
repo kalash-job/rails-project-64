@@ -12,7 +12,7 @@ lint:
 	bundle exec rubocop
 	bundle exec slim-lint app/views/
 
-linter-code-fix:
+lint-fix:
 	bundle exec rubocop -A
 
 deploy:

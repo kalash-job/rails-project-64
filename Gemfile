@@ -46,6 +46,8 @@ gem 'bootsnap', require: false
 
 gem 'bundler-audit'
 
+gem 'devise'
+
 gem 'faker'
 
 gem 'html2slim'
@@ -55,6 +57,8 @@ gem 'sentry-rails'
 gem 'sentry-ruby'
 
 gem 'slim_lint'
+
+gem 'slim-rails'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
