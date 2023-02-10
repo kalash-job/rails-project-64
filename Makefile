@@ -18,6 +18,12 @@ lint-fix:
 deploy:
 	railway up
 
+railway-logs:
+	railway logs
+
+railway-migrate:
+	railway run bin/rails db:migrate
+
 ci-setup:
 	cp -n .env.example .env || true
 	yarn install
