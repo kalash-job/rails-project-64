@@ -1,0 +1,25 @@
+- content_for :title do
+  = t('.title')
+ol.breadcrumb.pt-5.mt-5
+  li.breadcrumb-item = link_to t('.all_posts'), root_path
+  li.breadcrumb-item.active = @post.category.name
+.row.justify-content-center.mt-4
+  article.col-12
+    h1.mb-4.mb-lg-5 = @post.title
+  p
+  = simple_format(@post.body)
+  .d-flex.justify-content-between.mt-5
+    .post-section
+      span.me-2 == "#{t('.author')}: #{@post.creator.email}"
+      span.me-2 == "#{t('.created')}: #{time_ago_in_words @post.created_at}"
+
+lead.mb-3 = t('.comment')
+/ == render 'web/posts/comments/form',
+/         comment: @comment, url: post_comments_path(@post)
+
+.card.mb-4
+  / div = "Количество комментариев: #{@comments.count}"
+  / - @comments.each do | comment |
+  /   = comment
+  /   - unless comment.creator.nil?
+  /     .card-header.small.mb-2.d-flex = "#{comment.creator.email}"

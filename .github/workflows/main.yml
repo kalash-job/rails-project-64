@@ -11,8 +11,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # env:
-    #   RAILS_ENV: test
+    env:
+      RAILS_ENV: test
 
     steps:
       - uses: actions/checkout@v3

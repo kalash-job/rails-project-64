@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  root 'posts#index'
+
+  resources :posts, except: [:index]
+  resources :categories
+  # get '/users/sign_out', to: 'devise/sessions#destroy'
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  # root to: 'posts#index'
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

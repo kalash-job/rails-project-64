@@ -44,3 +44,5 @@
 /tmp/
 /log/
 /storage/
+/public/packs
+.byebug_history

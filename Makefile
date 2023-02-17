@@ -1,6 +1,9 @@
 tests:
 	bin/rails test
 
+seed:
+	bin/rails db:seed
+
 setup:
 	cp -n .env.example .env || true
 	bin/setup

@@ -1,8 +1,23 @@
 # frozen_string_literal: true
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+
+%w[Python Ruby JavaScript PHP].each do |category_name|
+  category = Category.create(name: category_name)
+  Rails.logger.debug { "Added category #{category.name}" }
+end
+
+10.times do
+  password = Faker::Internet.password
+  User.create(email: Faker::Internet.unique.email, password:, password_confirmation: password)
+end
+
+20.times do |index|
+  delimiter = %W[\n\n \n].fetch(index.even? ? 0 : 1, ' ')
+  post = Post.new(
+    title: Faker::Lorem.sentence,
+    body: Faker::Lorem.paragraphs(number: 17).join(delimiter)
+  )
+  post.creator = User.all.sample
+  post.category = Category.all.sample
+  post.save!
+  Rails.logger.debug { "Add post number #{index + 1} - #{post.title}" }
+end

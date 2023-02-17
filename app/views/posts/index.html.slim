@@ -1,0 +1,20 @@
+- content_for :title do
+  = t('.title')
+h1.mt-5.pt-5 = t('.collective_blog')
+h2 = t('.posts')
+.row
+  .col-md-12
+    - @posts.each do |post|
+      .card.mb-3
+        .card-body
+          h2.h5.card-title
+            = link_to post_path(post),
+                    class: 'link-dark text-decoration-none' do
+              = post.title
+          .card-text.mb-2 = post.body
+          .text-right.small.text-muted.mt-auto
+            span.me-2 == "#{t('.liked')}: 1 | "
+            span.me-2
+              == "#{t('.created')}: #{time_ago_in_words post.created_at} | "
+            span.me-2 == "#{t('.author')}: #{post.creator.email}"
+            / span.me-2 == "Комментариев: #{post.comments.count}"
