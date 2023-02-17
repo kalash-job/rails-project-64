@@ -51,6 +51,8 @@ gem 'faker'
 
 gem 'html2slim'
 
+gem 'kaminari'
+
 gem 'sentry-rails'
 
 gem 'sentry-ruby'

@@ -2,7 +2,7 @@
 
 class PostsController < ApplicationController
   def index
-    @posts = Post.by_creation_date_desc
+    @posts = Post.by_creation_date_desc.page(params[:page])
   end
 
   def show
