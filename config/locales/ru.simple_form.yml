@@ -1,0 +1,116 @@
+---
+ru:
+  simple_form:
+    "yes": 'Да'
+    "no": 'Нет'
+    required:
+      text: 'обязательное'
+      mark: '*'
+      html: ''
+    error_notification:
+      default_message: "Пожалуйста, исправьте ошибки:"
+    hints:
+      defaults:
+        body: Содержимое
+        email: Электронная почта
+        new:
+          body: Содержимое
+          email: Электронная почта
+          title: Название
+          password: Пароль
+          password_confirmation: Подтверждение пароля
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        title: Title
+      post:
+        edit:
+          body: Содержимое
+          title: Название
+        new:
+          body: Содержимое
+          category: Категория
+          title: Название
+        body: Содержимое
+        title: Название
+      post_comment:
+        body: Текст комментария
+        edit:
+          body: Текст комментария
+        show:
+          body: Текст комментария
+      user:
+        email: Электронная почта
+        new:
+          email: Электронная почта
+          remember_me: Запомнить меня
+          password: Пароль
+          password_confirmation: Подтверждение пароля
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        remember_me: Запомнить меня
+    labels:
+      defaults:
+        email: Электронная почта
+        new:
+          email: Электронная почта
+          password: Пароль
+          password_confirmation: Подтверждение пароля
+          title: Название
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        title: Название
+      post:
+        edit:
+          body: Содержимое
+          title: Название
+        new:
+          body: Содержимое
+          category: Категория
+          title: Название
+        body: Содержимое
+        title: Название
+      post_comment:
+        edit:
+          body: Текст комментария
+      user:
+        email: Электронная почта
+        new:
+          email: Электронная почта
+          password: Пароль
+          password_confirmation: Подтверждение пароля
+          remember_me: Запомнить меня
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        remember_me: Запомнить меня
+    placeholders:
+      defaults:
+        email: Электронная почта
+        new:
+          email: Электронная почта
+          password: Пароль
+          password_confirmation: Подтверждение пароля
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+      post:
+        edit:
+          body: Текст поста
+          title: Название
+        body: Текст поста
+        new:
+          body: Текст поста
+          title: Название
+        title: Название
+      post_comment:
+        edit:
+          body: Текст комментария
+        show:
+          body: Текст комментария
+        body: Текст
+      user:
+        email: Электронная почта
+        new:
+          email: Электронная почта
+          password: Пароль
+          password_confirmation: Подтверждение пароля
+        password: Пароль
+        password_confirmation: Подтверждение пароля

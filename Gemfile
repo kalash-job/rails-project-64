@@ -51,6 +51,8 @@ gem 'faker'
 
 gem 'html2slim'
 
+gem 'i18n'
+
 gem 'kaminari'
 
 gem 'sentry-rails'
@@ -86,6 +88,10 @@ end
 
 group :development do
   gem 'annotate'
+
+  gem 'i18n-debug'
+
+  gem 'i18n-tasks', '~> 1.0.12'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 

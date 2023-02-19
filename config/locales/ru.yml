@@ -1,0 +1,103 @@
+---
+ru:
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        few: "%{count} часа"
+        many: "%{count} часов"
+        one: "%{count} час"
+        other: "%{count} часов"
+        zero: "%{count} часов"
+      less_than_x_minutes:
+        few: "%{count} минуты"
+        many: "%{count} минут"
+        one: "%{count} минута"
+        other: "%{count} минут"
+        zero: "%{count} минут"
+      x_days:
+        few: "%{count} дня"
+        many: "%{count} дней"
+        one: "%{count} день"
+        other: "%{count} дней"
+        zero: "%{count} дней"
+      x_minutes:
+        few: "%{count} минуты"
+        many: "%{count} минут"
+        one: "%{count} минута"
+        other: "%{count} минут"
+        zero: "%{count} минут"
+  errors:
+    messages:
+      not_saved: Не сохранено
+  helpers:
+    submit:
+      post:
+        create: Создать пост
+  layouts:
+    application:
+      hexlet_title: "© Хекслет, %{year}"
+      title: Коллективный блог
+    shared:
+      nav:
+        add_post: Добавить пост
+        hexlet_logo: Хекслет
+        home: Главная
+        registration: Регистрация
+        sign_in: Войти
+        sign_out: Выйти
+  posts:
+    comments:
+      create:
+        success: Комментарий создан.
+      edit:
+        title: Изменить комментарий
+      update:
+        success: Комментарий обновлен.
+    create:
+      failure: Пост не был создан.
+      success: Пост создан.
+    destroy:
+      success: Пост удален.
+    edit:
+      title: Название
+    form:
+      reset: Очистить
+    index:
+      all_posts: Все посты
+      author: Автор
+      collective_blog: Коллективный блог
+      comments_count:
+        few: "%{count} комментария"
+        many: "%{count} комментариев"
+        one: "%{count} комментарий"
+        other: "%{count} комментариев"
+        zero: нет комментариев
+      confirm: Вы уверены?
+      continue: Продолжить
+      create: Новый пост
+      created: Создан
+      destroy: Удалить
+      edit: Редактировать
+      liked: Понравилось
+      posts: Посты
+      show: Смотреть
+      title: Название
+    new:
+      title: Новый пост
+    show:
+      all_posts: Все посты
+      author: Автор
+      body: Содержимое
+      comment: Комментарий
+      comments: Комментарии
+      created: Создан
+      title: Название
+    update:
+      success: Пост обновлен.
+  views:
+    pagination:
+      first: "&laquo; Первая"
+      last: Последняя &raquo;
+      next: Следующая &rsaquo;
+      previous: "&lsaquo; Предыдущая"
+      truncate: "&hellip;"

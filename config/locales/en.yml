@@ -1,33 +1,93 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
+---
 en:
-  hello: "Hello world"
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: "%{count} hour"
+        other: "%{count} hours"
+        zero: "%{count} hours"
+      less_than_x_minutes:
+        one: "%{count} minute"
+        other: "%{count} minutes"
+        zero: "%{count} minute"
+      x_days:
+        one: "%{count} day"
+        other: "%{count} days"
+        zero: "%{count} days"
+      x_minutes:
+        one: "%{count} minute"
+        other: "%{count} minutes"
+        zero: "%{count} minutes"
+  errors:
+    messages:
+      not_saved: Not saved
+  helpers:
+    submit:
+      post:
+        create: Create post
+  layouts:
+    application:
+      hexlet_title: "© Hexlet ltd, %{year}"
+      title: Collective blog
+    shared:
+      nav:
+        add_post: Add post
+        hexlet_logo: Hexlet
+        home: Home
+        registration: Registration
+        sign_in: Sign in
+        sign_out: Sign out
+  posts:
+    comments:
+      create:
+        success: Comment was created.
+      edit:
+        title: Editing comment
+      update:
+        success: Comment was updated.
+    create:
+      failure: Post was not created.
+      success: Post was created.
+    destroy:
+      success: Post was destroyed.
+    edit:
+      title: Title
+    form:
+      reset: Reset
+    index:
+      all_posts: All posts
+      author: Author
+      collective_blog: Collective blog
+      comments_count:
+        one: "%{count} comment"
+        other: "%{count} comments"
+        zero: No comments
+      confirm: Are you sure?
+      continue: Continue
+      create: New Post
+      created: Created
+      destroy: Destroy
+      edit: Edit
+      liked: Liked
+      posts: Posts
+      show: Show
+      title: Title
+    new:
+      title: New Post
+    show:
+      all_posts: All posts
+      author: Author
+      body: Content
+      comment: Comment
+      comments: Comments
+      created: Created
+      title: Title
+    update:
+      success: Post was updated.
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: Last &raquo;
+      next: Next &rsaquo;
+      previous: "&lsaquo; Prev"
+      truncate: "&hellip;"
