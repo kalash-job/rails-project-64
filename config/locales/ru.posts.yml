@@ -1,0 +1,52 @@
+---
+ru:
+  web:
+    posts:
+      comments:
+        create:
+          success: Комментарий создан.
+        edit:
+          title: Изменить комментарий
+        update:
+          success: Комментарий обновлен.
+      create:
+        failure: Пост не был создан.
+        success: Пост создан.
+      destroy:
+        success: Пост удален.
+      edit:
+        title: Название
+      form:
+        reset: Очистить
+      index:
+        all_posts: Все посты
+        author: Автор
+        collective_blog: Коллективный блог
+        comments_count:
+          few: "%{count} комментария"
+          many: "%{count} комментариев"
+          one: "%{count} комментарий"
+          other: "%{count} комментариев"
+          zero: нет комментариев
+        confirm: Вы уверены?
+        continue: Продолжить
+        create: Новый пост
+        created: Создан
+        destroy: Удалить
+        edit: Редактировать
+        liked: Понравилось
+        posts: Посты
+        show: Смотреть
+        title: Название
+      new:
+        title: Новый пост
+      show:
+        all_posts: Все посты
+        author: Автор
+        body: Содержимое
+        comment: Комментарий
+        comments: Комментарии
+        created: Создан
+        title: Название
+      update:
+        success: Пост обновлен.

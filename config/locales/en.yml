@@ -37,53 +37,6 @@ en:
         registration: Registration
         sign_in: Sign in
         sign_out: Sign out
-  posts:
-    comments:
-      create:
-        success: Comment was created.
-      edit:
-        title: Editing comment
-      update:
-        success: Comment was updated.
-    create:
-      failure: Post was not created.
-      success: Post was created.
-    destroy:
-      success: Post was destroyed.
-    edit:
-      title: Title
-    form:
-      reset: Reset
-    index:
-      all_posts: All posts
-      author: Author
-      collective_blog: Collective blog
-      comments_count:
-        one: "%{count} comment"
-        other: "%{count} comments"
-        zero: No comments
-      confirm: Are you sure?
-      continue: Continue
-      create: New Post
-      created: Created
-      destroy: Destroy
-      edit: Edit
-      liked: Liked
-      posts: Posts
-      show: Show
-      title: Title
-    new:
-      title: New Post
-    show:
-      all_posts: All posts
-      author: Author
-      body: Content
-      comment: Comment
-      comments: Comments
-      created: Created
-      title: Title
-    update:
-      success: Post was updated.
   views:
     pagination:
       first: "&laquo; First"
