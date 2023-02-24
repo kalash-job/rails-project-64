@@ -1,0 +1,25 @@
+- comment_tree.each_key do |comment|
+  .card.mt-2.rounded-0 id="comment-#{comment.id}"
+    .card-header.border-0p
+      span.me-2.me-2 = link_to '#', "#comment-#{comment.id}"
+      span.me-2 = comment.creator.email
+      span.fs-6.text-muted = l(comment.created_at, format: :short)
+    .card-body.border-0
+      p.card-text = comment.content
+    .card-footer.border-0
+      - if user_signed_in?
+        a.fs-6.text-decoration-underline.text-lowercase.collapsed[type="button" aria_exanded="false"
+        aria_controls="response_comment-#{comment.id}" data-bs-target="#response_comment-#{comment.id}"
+        data-bs-toggle="collapse" href="#" aria-expanded="false"] = t('.reply')
+      - @parent_id = comment.id
+      - comment_parent_id = new_comment.parent.nil? ? nil : new_comment.parent.id
+      - if @parent_id == comment_parent_id
+        - form_comment = new_comment
+        - class_value = 'show'
+      - else
+        - form_comment = @pure_comment
+        - class_value = ''
+      .ms-2.collapse id="response_comment-#{comment.id}" class="#{class_value}" style=""
+        == render 'web/posts/comments/form', comment: form_comment, url: post_comments_path(@post)
+      - if comment_tree.fetch(comment).present?
+        == render 'web/posts/comments/comment_block', comment_tree: comment_tree.fetch(comment), new_comment: @comment

@@ -1,5 +1,20 @@
 ---
 ru:
+  date:
+    abbr_month_names:
+      -
+      - Янв
+      - Февр
+      - Март
+      - Апр
+      - Мая
+      - Июн
+      - Июл
+      - Авг
+      - Сент
+      - Окт
+      - Нояб
+      - Дек
   datetime:
     distance_in_words:
       about_x_hours:
@@ -33,6 +48,8 @@ ru:
     submit:
       post:
         create: Создать пост
+      post_comment:
+        create: Добавить комментарий
   layouts:
     application:
       hexlet_title: "© Хекслет, %{year}"
@@ -45,6 +62,9 @@ ru:
         registration: Регистрация
         sign_in: Войти
         sign_out: Выйти
+  time:
+    formats:
+      short: "%d %b.,%H:%M"
   views:
     pagination:
       first: "&laquo; Первая"

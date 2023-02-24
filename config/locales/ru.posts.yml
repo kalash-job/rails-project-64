@@ -5,6 +5,9 @@ ru:
       comments:
         create:
           success: Комментарий создан.
+          failure: Комментарий не был создан.
+        comment_block:
+          reply: ответить
         edit:
           title: Изменить комментарий
         update:

@@ -2,24 +2,32 @@ en:
   activerecord:
     models:
       post: Post
-      post/comment: Comment
+      post_comment: Comment
     attributes:
       post:
-        body: Content
-        title: Title
-      post/comment:
-        body: Text of comment
+        body: 'Content:'
+        category: 'Category:'
+        title: 'Title:'
+      post_comment:
+        content: 'Text of comment:'
 
     errors:
       models:
         post:
           attributes:
             body:
+              blank: Content is empty
               too_short: Content is too short
             category:
               required: Category is required
             title:
               blank: Title can not be empty
+              too_short: Title is too short
+        post_comment:
+          attributes:
+            content:
+              blank: Comment can not be empty
+              too_short: Comment is too short
         user:
           attributes:
             email:

@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class PostsControllerTest < ActionDispatch::IntegrationTest
+class Web::PostsControllerTest < ActionDispatch::IntegrationTest
   include Devise::Test::IntegrationHelpers
   setup do
     @post = posts(:one)

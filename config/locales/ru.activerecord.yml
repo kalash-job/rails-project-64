@@ -2,25 +2,33 @@ ru:
   activerecord:
     models:
       post: Пост
-      post/comment: Комментарий
+      post_comment: Комментарий
 
     attributes:
       post:
-        body: Содержимое
-        title: Название
-      post/comment:
-        body: Текст комментария
+        body: 'Текст поста:'
+        category: 'Категория:'
+        title: 'Название:'
+      post_comment:
+        content: 'Текст комментария:'
 
     errors:
       models:
         post:
           attributes:
             body:
-              too_short: Содержимое слишком короткое
+              blank: Текст поста не может отсутствовать
+              too_short: Текст поста слишком короткий
             category:
               required: Категория не может отсутствовать
             title:
-              blank: Заголовок не может быть пустым
+              blank: Название не может быть пустым
+              too_short: Текст названия слишком короткий
+        post_comment:
+          attributes:
+            content:
+              blank: Комментарий не может быть пустым
+              too_short: Текст комментария слишком короткий
         user:
           attributes:
             email:

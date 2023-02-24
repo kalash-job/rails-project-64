@@ -2,8 +2,11 @@ en:
   web:
     posts:
       comments:
+        comment_block:
+          reply: reply
         create:
           success: Comment was created.
+          failure: Comment was not created.
         edit:
           title: Editing comment
         update:

@@ -1,5 +1,20 @@
 ---
 en:
+  date:
+    abbr_month_names:
+      -
+      - Jan
+      - Feb
+      - Mar
+      - Apr
+      - May
+      - Jun
+      - Jul
+      - Aug
+      - Sep
+      - Oct
+      - Nov
+      - Dec
   datetime:
     distance_in_words:
       about_x_hours:
@@ -25,6 +40,8 @@ en:
     submit:
       post:
         create: Create post
+      post_comment:
+        create: Add comment
   layouts:
     application:
       hexlet_title: "© Hexlet ltd, %{year}"
@@ -37,6 +54,9 @@ en:
         registration: Registration
         sign_in: Sign in
         sign_out: Sign out
+  time:
+    formats:
+      short: "%d %b.,%H:%M"
   views:
     pagination:
       first: "&laquo; First"

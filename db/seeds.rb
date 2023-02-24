@@ -21,3 +21,30 @@ end
   post.save!
   Rails.logger.debug { "Add post number #{index + 1} - #{post.title}" }
 end
+
+def create_comment(post, user, parent_comment)
+  comment_params = { content: Faker::Lorem.paragraph_by_chars(number: 190), parent: parent_comment, creator: user }
+  comment = post.comments.build(comment_params)
+  comment.save!
+end
+
+10.times do
+  post = Post.all.sample
+  user = User.all.sample
+  parent_comment = nil
+  create_comment(post, user, parent_comment)
+end
+
+20.times do
+  post = Post.all.sample
+  parent_comment = post.comments.sample
+  user = User.all.sample
+  create_comment(post, user, parent_comment)
+end
+
+40.times do |_index|
+  post = Post.all.sample
+  parent_comment = post.comments.filter { |c| !c.parent.nil? }.sample
+  user = User.all.sample
+  create_comment(post, user, parent_comment)
+end

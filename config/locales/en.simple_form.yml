@@ -1,8 +1,11 @@
 en:
   simple_form:
-
     "yes": 'Yes'
     "no": 'No'
+    activerecord:
+      attributes:
+        post:
+          body: Content
     required:
       text: 'required'
       mark: '*'
@@ -101,10 +104,8 @@ en:
           title: Enter post title
         title: Title
       post_comment:
-        edit:
-          body: Text of comment
-        show:
-          body: Text of comment
+        new:
+          content: Text of comment
         body: Enter comment body
       user:
         email: Email

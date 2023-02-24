@@ -13,13 +13,11 @@ ol.breadcrumb.pt-5.mt-5
       span.me-2 == "#{t('.author')}: #{@post.creator.email}"
       span.me-2 == "#{t('.created')}: #{time_ago_in_words @post.created_at}"
 
-lead.mb-3 = t('.comment')
-/ == render 'web/posts/comments/form',
-/         comment: @comment, url: post_comments_path(@post)
-
-.card.mb-4
-  / div = "Количество комментариев: #{@comments.count}"
-  / - @comments.each do | comment |
-  /   = comment
-  /   - unless comment.creator.nil?
-  /     .card-header.small.mb-2.d-flex = "#{comment.creator.email}"
+lead.mb-3 = t('.comments')
+- if user_signed_in?
+  - @parent_id = nil
+  - form_comment = @comment.parent.nil? ? @comment : @pure_comment
+  == render 'web/posts/comments/form', comment: form_comment, url: post_comments_path(@post)
+- @comments.each do |comment_tree|
+  == render 'web/posts/comments/comment_block', comment_tree:, new_comment: @comment
+br

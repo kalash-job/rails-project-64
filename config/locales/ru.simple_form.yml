@@ -3,6 +3,10 @@ ru:
   simple_form:
     "yes": 'Да'
     "no": 'Нет'
+    activerecord:
+      attributes:
+        post:
+          body: Content
     required:
       text: 'обязательное'
       mark: '*'
@@ -101,10 +105,8 @@ ru:
           title: Название
         title: Название
       post_comment:
-        edit:
-          body: Текст комментария
-        show:
-          body: Текст комментария
+        new:
+          content: Текст комментария
         body: Текст
       user:
         email: Электронная почта
