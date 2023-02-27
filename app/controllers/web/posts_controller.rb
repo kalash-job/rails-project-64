@@ -12,6 +12,7 @@ class Web::PostsController < Web::ApplicationController
     @comments = root_comments.map { |comment| PostComment.comments_subtree(comment) }
     @comment = @post.comments.build
     @pure_comment = @post.comments.build
+    @like = current_user.nil? ? nil : PostLike.likes_by_post(@post.id).likes_by_user(current_user.id).first
   end
 
   def new
@@ -24,8 +25,8 @@ class Web::PostsController < Web::ApplicationController
     if @post.save
       redirect_to root_path, notice: t('.success')
     else
+      flash.now[:failure] = t('.failure')
       render :new, status: :unprocessable_entity
-      flash[:failure] = t('.failure')
     end
   end
 

@@ -27,6 +27,9 @@ class Post < ApplicationRecord
   belongs_to :creator, class_name: 'User', inverse_of: :posts
   has_many :comments, class_name: 'PostComment', inverse_of: :post, dependent: :destroy
 
+  has_many :likes, class_name: 'PostLike', dependent: :destroy
+  has_many :liked_users, through: :likes, source: :user
+
   validates :body, :title, presence: true
   validates :body, length: { in: 200..4000 }, allow_blank: true
   validates :title, length: { in: 5..255 }, allow_blank: true

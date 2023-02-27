@@ -11,8 +11,9 @@ class Web::Posts::CommentsController < Web::ApplicationController
     else
       root_comments = PostComment.comments_by_post(@post.id).root_comments.by_creation_date_desc
       @comments = root_comments.map { |comment| PostComment.comments_subtree(comment) }
+      @like = PostLike.likes_by_post(@post.id).likes_by_user(current_user.id).first
       @pure_comment = @post.comments.build
-      flash[:failure] = t('.failure')
+      flash.now[:failure] = t('.failure')
       render 'web/posts/show', status: :unprocessable_entity
     end
   end

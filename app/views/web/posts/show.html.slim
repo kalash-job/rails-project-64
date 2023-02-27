@@ -9,10 +9,22 @@ ol.breadcrumb.pt-5.mt-5
   p
   = simple_format(@post.body)
   .d-flex.justify-content-between.mt-5
-    .post-section
+    #post-section
       span.me-2 == "#{t('.author')}: #{@post.creator.email}"
       span.me-2 == "#{t('.created')}: #{time_ago_in_words @post.created_at}"
-
+    #like-section
+      span.me-2 = @post.likes.count
+      - if user_signed_in?
+        - if @like
+          = link_to like_path(@like),
+                  data: { turbo_method: :delete }, class: 'link-dark' do
+            i.bi-hand-thumbs-up-fill
+        - else
+          = link_to post_likes_path(@post), data: { turbo_method: 'post' }, class: 'link-dark' do
+            i.bi-hand-thumbs-up
+      - else
+        i.bi.bi-hand-thumbs-up
+br
 lead.mb-3 = t('.comments')
 - if user_signed_in?
   - @parent_id = nil

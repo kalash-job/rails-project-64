@@ -48,3 +48,9 @@ end
   user = User.all.sample
   create_comment(post, user, parent_comment)
 end
+
+80.times do |_index|
+  post_id = Post.all.sample.id
+  user = User.all.sample
+  user.likes.create(post_id:)
+end

@@ -24,10 +24,7 @@ en:
         all_posts: All posts
         author: Author
         collective_blog: Collective blog
-        comments_count:
-          one: "%{count} comment"
-          other: "%{count} comments"
-          zero: No comments
+        comments: Comments
         confirm: Are you sure?
         continue: Continue
         create: New Post
