@@ -2,19 +2,19 @@
 en:
   date:
     abbr_month_names:
-      -
-      - Jan
-      - Feb
-      - Mar
-      - Apr
-      - May
-      - Jun
-      - Jul
-      - Aug
-      - Sep
-      - Oct
-      - Nov
-      - Dec
+    -
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
   datetime:
     distance_in_words:
       about_x_hours:
@@ -33,9 +33,6 @@ en:
         one: "%{count} minute"
         other: "%{count} minutes"
         zero: "%{count} minutes"
-  errors:
-    messages:
-      not_saved: Not saved
   helpers:
     submit:
       post:

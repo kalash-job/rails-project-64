@@ -1,8 +1,6 @@
+---
 en:
   activerecord:
-    models:
-      post: Post
-      post_comment: Comment
     attributes:
       post:
         body: 'Content:'
@@ -10,7 +8,6 @@ en:
         title: 'Title:'
       post_comment:
         content: 'Text of comment:'
-
     errors:
       models:
         post:
@@ -37,3 +34,6 @@ en:
               blank: can not be empty
             password_confirmation:
               confirmation: Password confirmation value must be equal to Password value
+    models:
+      post: Post
+      post_comment: Comment

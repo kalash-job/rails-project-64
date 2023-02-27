@@ -1,3 +1,4 @@
+---
 en:
   web:
     posts:
@@ -5,8 +6,8 @@ en:
         comment_block:
           reply: reply
         create:
-          success: Comment was created.
           failure: Comment was not created.
+          success: Comment was created.
         edit:
           title: Editing comment
         update:

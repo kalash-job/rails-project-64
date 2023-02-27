@@ -1,17 +1,12 @@
+---
 en:
   simple_form:
-    "yes": 'Yes'
-    "no": 'No'
     activerecord:
       attributes:
         post:
           body: Content
-    required:
-      text: 'required'
-      mark: '*'
-      html: ''
     error_notification:
-      default_message: "Please check the problems:"
+      default_message: 'Please check the problems:'
     hints:
       defaults:
         body: Content
@@ -19,13 +14,14 @@ en:
         new:
           body: Content
           email: Email
+          password: Password
           password_confirmation: Password confirmation
           title: Title
-          password: Password
         password: Password
         password_confirmation: Password confirmation
         title: Title
       post:
+        body: Content
         edit:
           body: Content
           title: Title
@@ -33,7 +29,6 @@ en:
           body: Content
           category: Category
           title: Title
-        body: Content
         title: Title
       post_comment:
         body: Text of comment
@@ -45,9 +40,9 @@ en:
         email: Email
         new:
           email: Email
-          remember_me: Remember me
           password: Password
           password_confirmation: Password confirmation
+          remember_me: Remember me
         password: Password
         password_confirmation: Password confirmation
         remember_me: Remember me
@@ -63,6 +58,7 @@ en:
         password_confirmation: Password confirmation
         title: Title
       post:
+        body: Content
         edit:
           body: Content
           title: Title
@@ -70,7 +66,6 @@ en:
           body: Content
           category: Category
           title: Title
-        body: Content
         title: Title
       post_comment:
         edit:
@@ -85,6 +80,7 @@ en:
         password: Password
         password_confirmation: Password confirmation
         remember_me: Remember me
+    'no': 'No'
     placeholders:
       defaults:
         email: Email
@@ -104,9 +100,9 @@ en:
           title: Enter post title
         title: Title
       post_comment:
+        body: Enter comment body
         new:
           content: Text of comment
-        body: Enter comment body
       user:
         email: Email
         new:
@@ -115,3 +111,8 @@ en:
           password_confirmation: Password confirmation
         password: Password
         password_confirmation: Password confirmation
+    required:
+      html: ''
+      mark: "*"
+      text: required
+    'yes': 'Yes'

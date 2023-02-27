@@ -1,23 +1,22 @@
-# Sample localization file for Kaminari. You can override these values in your app's locales file if you want.
-
+---
 en:
-  views:
-    pagination:
-      first: "<< First"
-      last: "Last >>"
-      previous: "< Prev"
-      next: "Next >"
-      truncate: "..."
   helpers:
     page_entries_info:
       entry:
-        zero: "entries"
-        one: "entry"
-        other: "entries"
+        one: entry
+        other: entries
+        zero: entries
+      more_pages:
+        display_entries: Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total
       one_page:
         display_entries:
-          zero: "No %{entry_name} found"
-          one: "Displaying <b>1</b> %{entry_name}"
-          other: "Displaying <b>all %{count}</b> %{entry_name}"
-      more_pages:
-        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
+          one: Displaying <b>1</b> %{entry_name}
+          other: Displaying <b>all %{count}</b> %{entry_name}
+          zero: No %{entry_name} found
+  views:
+    pagination:
+      first: "<< First"
+      last: Last >>
+      next: Next >
+      previous: "< Prev"
+      truncate: "..."

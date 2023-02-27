@@ -2,19 +2,19 @@
 ru:
   date:
     abbr_month_names:
-      -
-      - Янв
-      - Февр
-      - Март
-      - Апр
-      - Мая
-      - Июн
-      - Июл
-      - Авг
-      - Сент
-      - Окт
-      - Нояб
-      - Дек
+    -
+    - Янв
+    - Февр
+    - Март
+    - Апр
+    - Мая
+    - Июн
+    - Июл
+    - Авг
+    - Сент
+    - Окт
+    - Нояб
+    - Дек
   datetime:
     distance_in_words:
       about_x_hours:
@@ -41,9 +41,6 @@ ru:
         one: "%{count} минута"
         other: "%{count} минут"
         zero: "%{count} минут"
-  errors:
-    messages:
-      not_saved: Не сохранено
   helpers:
     submit:
       post:

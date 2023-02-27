@@ -1,9 +1,6 @@
+---
 ru:
   activerecord:
-    models:
-      post: Пост
-      post_comment: Комментарий
-
     attributes:
       post:
         body: 'Текст поста:'
@@ -11,7 +8,6 @@ ru:
         title: 'Название:'
       post_comment:
         content: 'Текст комментария:'
-
     errors:
       models:
         post:
@@ -38,3 +34,6 @@ ru:
               blank: не может быть пустым
             password_confirmation:
               confirmation: Подтверждение пароля не совпадает со значением поля Пароль
+    models:
+      post: Пост
+      post_comment: Комментарий

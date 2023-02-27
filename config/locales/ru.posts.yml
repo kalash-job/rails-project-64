@@ -3,11 +3,11 @@ ru:
   web:
     posts:
       comments:
-        create:
-          success: Комментарий создан.
-          failure: Комментарий не был создан.
         comment_block:
           reply: ответить
+        create:
+          failure: Комментарий не был создан.
+          success: Комментарий создан.
         edit:
           title: Изменить комментарий
         update:

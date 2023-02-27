@@ -1,18 +1,12 @@
 ---
 ru:
   simple_form:
-    "yes": 'Да'
-    "no": 'Нет'
     activerecord:
       attributes:
         post:
           body: Content
-    required:
-      text: 'обязательное'
-      mark: '*'
-      html: ''
     error_notification:
-      default_message: "Пожалуйста, исправьте ошибки:"
+      default_message: 'Пожалуйста, исправьте ошибки:'
     hints:
       defaults:
         body: Содержимое
@@ -20,13 +14,14 @@ ru:
         new:
           body: Содержимое
           email: Электронная почта
-          title: Название
           password: Пароль
           password_confirmation: Подтверждение пароля
+          title: Название
         password: Пароль
         password_confirmation: Подтверждение пароля
         title: Title
       post:
+        body: Содержимое
         edit:
           body: Содержимое
           title: Название
@@ -34,7 +29,6 @@ ru:
           body: Содержимое
           category: Категория
           title: Название
-        body: Содержимое
         title: Название
       post_comment:
         body: Текст комментария
@@ -46,9 +40,9 @@ ru:
         email: Электронная почта
         new:
           email: Электронная почта
-          remember_me: Запомнить меня
           password: Пароль
           password_confirmation: Подтверждение пароля
+          remember_me: Запомнить меня
         password: Пароль
         password_confirmation: Подтверждение пароля
         remember_me: Запомнить меня
@@ -64,6 +58,7 @@ ru:
         password_confirmation: Подтверждение пароля
         title: Название
       post:
+        body: Содержимое
         edit:
           body: Содержимое
           title: Название
@@ -71,7 +66,6 @@ ru:
           body: Содержимое
           category: Категория
           title: Название
-        body: Содержимое
         title: Название
       post_comment:
         edit:
@@ -86,6 +80,7 @@ ru:
         password: Пароль
         password_confirmation: Подтверждение пароля
         remember_me: Запомнить меня
+    'no': Нет
     placeholders:
       defaults:
         email: Электронная почта
@@ -96,18 +91,18 @@ ru:
         password: Пароль
         password_confirmation: Подтверждение пароля
       post:
+        body: Текст поста
         edit:
           body: Текст поста
           title: Название
-        body: Текст поста
         new:
           body: Текст поста
           title: Название
         title: Название
       post_comment:
+        body: Текст
         new:
           content: Текст комментария
-        body: Текст
       user:
         email: Электронная почта
         new:
@@ -116,3 +111,8 @@ ru:
           password_confirmation: Подтверждение пароля
         password: Пароль
         password_confirmation: Подтверждение пароля
+    required:
+      html: ''
+      mark: "*"
+      text: обязательное
+    'yes': Да
