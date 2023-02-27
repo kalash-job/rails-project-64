@@ -1,11 +1,11 @@
 ru:
   views:
     pagination:
-      first: "&laquo; Первая"
-      last: "Последняя &raquo;"
-      previous: "&lsaquo; Предыдущая"
-      next: "Следующая &rsaquo;"
-      truncate: "&hellip;"
+      first: "<< Первая"
+      last: "Последняя >>"
+      previous: "< Предыдущая"
+      next: "Следующая >"
+      truncate: "..."
   helpers:
     page_entries_info:
       entry:
