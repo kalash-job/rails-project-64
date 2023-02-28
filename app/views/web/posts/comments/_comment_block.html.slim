@@ -12,7 +12,7 @@
         aria_controls="response_comment-#{comment.id}" data-bs-target="#response_comment-#{comment.id}"
         data-bs-toggle="collapse" href="#" aria-expanded="false"] = t('.reply')
       - @parent_id = comment.id
-      - comment_parent_id = new_comment.parent.nil? ? nil : new_comment.parent.id
+      - comment_parent_id = new_comment.parent&.id
       - if @parent_id == comment_parent_id
         - form_comment = new_comment
         - class_value = 'show'

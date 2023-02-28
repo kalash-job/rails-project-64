@@ -7,5 +7,5 @@
     per_page     : number of items to fetch per page
     remote       : data-remote
 span class="page#{' current active' if page.current?} page-link"
-  == link_to_unless page.current?, page, url, remote: remote, rel: page.rel
+  == link_to_unless page.current?, page, url, remote:, rel: page.rel
 '
