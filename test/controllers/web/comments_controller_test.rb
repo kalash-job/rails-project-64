@@ -15,7 +15,7 @@ class Web::CommentsControllerTest < ActionDispatch::IntegrationTest
     }
     @searching_attrs = {
       content:,
-      creator_id: users(:one).id,
+      user_id: users(:one).id,
       post_id: @post.id
     }
   end

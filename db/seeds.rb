@@ -23,7 +23,7 @@ end
 end
 
 def create_comment(post, user, parent_comment)
-  comment_params = { content: Faker::Lorem.paragraph_by_chars(number: 190), parent: parent_comment, creator: user }
+  comment_params = { content: Faker::Lorem.paragraph_by_chars(number: 190), parent: parent_comment, user: }
   comment = post.comments.build(comment_params)
   comment.save!
 end
@@ -42,7 +42,7 @@ end
   create_comment(post, user, parent_comment)
 end
 
-40.times do |_index|
+80.times do |_index|
   post = Post.all.sample
   parent_comment = post.comments.filter { |c| !c.parent.nil? }.sample
   user = User.all.sample
