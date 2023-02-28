@@ -5,8 +5,8 @@ Rails.application.routes.draw do
     root 'posts#index'
     resources :posts, only: %i[show new create] do
       scope module: :posts do
-        post '/comments', to: 'comments#create'
-        resources :likes, shallow: true, only: %i[create destroy]
+        resources :comments, only: %i[create]
+        resource :like, only: %i[create destroy]
       end
     end
   end
