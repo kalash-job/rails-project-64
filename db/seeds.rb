@@ -10,7 +10,7 @@ end
   User.create(email: Faker::Internet.unique.email, password:, password_confirmation: password)
 end
 
-20.times do |index|
+60.times do |index|
   delimiter = %W[\n\n \n].fetch(index.even? ? 0 : 1, ' ')
   post = Post.new(
     title: Faker::Lorem.sentence,
