@@ -12,7 +12,7 @@ class Web::LikesControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create like' do
     sign_in @user
-    post post_like_url(@post)
+    post post_likes_url(@post)
     like = PostLike.likes_by_post(@post.id).likes_by_user(@user.id).first
 
     assert { like }
@@ -20,7 +20,7 @@ class Web::LikesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should not create like without login' do
-    post post_like_url(@post)
+    post post_likes_url(@post)
     like = PostLike.likes_by_post(@post.id).likes_by_user(@user.id).first
 
     assert { like.nil? }
@@ -31,7 +31,7 @@ class Web::LikesControllerTest < ActionDispatch::IntegrationTest
     sign_in @user
     like = post_likes(:one)
     deleted_like_id = like.id
-    delete post_like_url(like.post)
+    delete post_like_url(like.post, like)
 
     assert_redirected_to post_path(like.post)
     assert { PostLike.find_by(id: deleted_like_id).nil? }
@@ -40,7 +40,7 @@ class Web::LikesControllerTest < ActionDispatch::IntegrationTest
   test 'should not destroy like without login' do
     like = post_likes(:one)
     deleted_like_id = like.id
-    delete post_like_url(like.post)
+    delete post_like_url(like.post, like)
 
     assert_redirected_to new_user_session_path
     assert { PostLike.find_by(id: deleted_like_id).present? }

@@ -16,11 +16,11 @@ ol.breadcrumb.pt-5.mt-5
       span.me-2 = @post.likes.count
       - if user_signed_in?
         - if @like
-          = link_to post_like_path(@post),
+          = link_to post_like_path(@post, @like),
                   data: { turbo_method: :delete }, class: 'link-dark' do
             i.bi-hand-thumbs-up-fill
         - else
-          = link_to post_like_path(@post), data: { turbo_method: 'post' }, class: 'link-dark' do
+          = link_to post_likes_path(@post), data: { turbo_method: 'post' }, class: 'link-dark' do
             i.bi-hand-thumbs-up
       - else
         i.bi.bi-hand-thumbs-up
