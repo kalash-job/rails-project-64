@@ -26,7 +26,4 @@ class PostLike < ApplicationRecord
   belongs_to :user, inverse_of: :likes
 
   validates :post_id, uniqueness: { scope: :user_id }
-
-  scope :likes_by_post, ->(post_id) { where(post_id:) }
-  scope :likes_by_user, ->(user_id) { where(user_id:) }
 end

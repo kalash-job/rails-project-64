@@ -13,7 +13,7 @@ class Web::LikesControllerTest < ActionDispatch::IntegrationTest
   test 'should create like' do
     sign_in @user
     post post_likes_url(@post)
-    like = PostLike.likes_by_post(@post.id).likes_by_user(@user.id).first
+    like = PostLike.find_by(post_id: @post.id, user_id: @user.id)
 
     assert { like }
     assert_redirected_to post_path(@post)
@@ -21,7 +21,7 @@ class Web::LikesControllerTest < ActionDispatch::IntegrationTest
 
   test 'should not create like without login' do
     post post_likes_url(@post)
-    like = PostLike.likes_by_post(@post.id).likes_by_user(@user.id).first
+    like = PostLike.find_by(post_id: @post.id, user_id: @user.id)
 
     assert { like.nil? }
     assert_redirected_to new_user_session_path

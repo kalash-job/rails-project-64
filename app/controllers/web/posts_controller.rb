@@ -11,7 +11,7 @@ class Web::PostsController < Web::ApplicationController
     @comments = @post.comments.arrange(order: { created_at: :desc })
     @comment = @post.comments.build
     @pure_comment = @post.comments.build
-    @like = current_user.nil? ? nil : PostLike.likes_by_post(@post.id).likes_by_user(current_user.id).first
+    @like = current_user.nil? ? nil : PostLike.find_by(post_id: @post.id, user_id: current_user.id)
   end
 
   def new
