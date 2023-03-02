@@ -9,8 +9,7 @@ class Web::Posts::CommentsController < Web::ApplicationController
     if @comment.save
       redirect_to post_path(@post), notice: t('.success')
     else
-      root_comments = PostComment.comments_by_post(@post.id).root_comments.by_creation_date_desc
-      @comments = root_comments.map { |comment| PostComment.comments_subtree(comment) }
+      @comments = @post.comments.arrange(order: { created_at: :desc })
       @like = PostLike.likes_by_post(@post.id).likes_by_user(current_user.id).first
       @pure_comment = @post.comments.build
       flash.now[:failure] = t('.failure')

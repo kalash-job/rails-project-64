@@ -30,9 +30,4 @@ class PostComment < ApplicationRecord
 
   validates :content, length: { in: 5..400 }, allow_blank: true
   validates :content, presence: true
-
-  scope :by_creation_date_desc, -> { order(created_at: :desc) }
-  scope :root_comments, -> { where(ancestry: nil) }
-  scope :comments_by_post, ->(post_id) { where(post_id:) }
-  scope :comments_subtree, ->(comment) { comment.subtree.arrange(order: { created_at: :desc }) }
 end

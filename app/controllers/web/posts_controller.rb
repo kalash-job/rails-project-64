@@ -8,8 +8,7 @@ class Web::PostsController < Web::ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    root_comments = PostComment.comments_by_post(@post.id).root_comments.by_creation_date_desc
-    @comments = root_comments.map { |comment| PostComment.comments_subtree(comment) }
+    @comments = @post.comments.arrange(order: { created_at: :desc })
     @comment = @post.comments.build
     @pure_comment = @post.comments.build
     @like = current_user.nil? ? nil : PostLike.likes_by_post(@post.id).likes_by_user(current_user.id).first

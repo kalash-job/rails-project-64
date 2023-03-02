@@ -30,6 +30,5 @@ lead.mb-3 = t('.comments')
   - @parent_id = nil
   - form_comment = @comment.parent.nil? ? @comment : @pure_comment
   == render 'web/posts/comments/form', comment: form_comment, url: post_comments_path(@post)
-- @comments.each do |comment_tree|
-  == render 'web/posts/comments/comment_block', comment_tree:, new_comment: @comment
+== render 'web/posts/comments/comment_block', comment_tree: @comments, new_comment: @comment
 br
