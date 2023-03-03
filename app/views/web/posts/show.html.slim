@@ -27,8 +27,8 @@ ol.breadcrumb.pt-5.mt-5
 br
 lead.mb-3 = t('.comments')
 - if user_signed_in?
-  - @parent_id = nil
-  - form_comment = @comment.parent.nil? ? @comment : @pure_comment
-  == render 'web/posts/comments/form', comment: form_comment, url: post_comments_path(@post)
-== render 'web/posts/comments/comment_block', comment_tree: @comments, new_comment: @comment
+  - form_comment = @comment.parent.nil? ? @comment : @empty_comment
+  == render 'web/posts/comments/form', comment: form_comment, url: post_comments_path(@post), parent_id: nil
+== render 'web/posts/comments/comment_block', comment_tree: @comments,
+        new_comment: @comment, empty_comment: @empty_comment, post: @post
 br

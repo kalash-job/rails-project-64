@@ -4,6 +4,6 @@
     = f.error_notification message: f.object.errors[:base].to_sentence
 
   = f.input :content, as: :text, label: false
-  = f.input :parent_id, as: :hidden, input_html: { value: @parent_id, type: 'hidden', class: 'hidden' }
+  = f.input :parent_id, as: :hidden, input_html: { value: parent_id, type: 'hidden', class: 'hidden' }
 
   = f.button :submit, class: 'btn btn-primary btn-sm mt-4 btn-block'

@@ -11,15 +11,16 @@
         a.fs-6.text-decoration-underline.text-lowercase.collapsed[type="button" aria_exanded="false"
         aria_controls="response_comment-#{comment.id}" data-bs-target="#response_comment-#{comment.id}"
         data-bs-toggle="collapse" href="#" aria-expanded="false"] = t('.reply')
-      - @parent_id = comment.id
+      - parent_id = comment.id
       - comment_parent_id = new_comment.parent&.id
-      - if @parent_id == comment_parent_id
+      - if parent_id == comment_parent_id
         - form_comment = new_comment
         - class_value = 'show'
       - else
-        - form_comment = @pure_comment
+        - form_comment = empty_comment
         - class_value = ''
       .ms-2.collapse id="response_comment-#{comment.id}" class="#{class_value}" style=""
-        == render 'web/posts/comments/form', comment: form_comment, url: post_comments_path(@post)
+        == render 'web/posts/comments/form', comment: form_comment, url: post_comments_path(post), parent_id:
       - if comment_tree.fetch(comment).present?
-        == render 'web/posts/comments/comment_block', comment_tree: comment_tree.fetch(comment), new_comment: @comment
+        == render 'web/posts/comments/comment_block', comment_tree: comment_tree.fetch(comment),
+                new_comment:, empty_comment:, post:
