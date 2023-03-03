@@ -11,7 +11,7 @@ class Web::PostsController < Web::ApplicationController
     @comments = @post.comments.arrange(order: { created_at: :desc })
     @comment = @post.comments.build
     @pure_comment = @post.comments.build
-    @like = current_user.nil? ? nil : PostLike.find_by(post_id: @post.id, user_id: current_user.id)
+    @like = PostLike.find_by(post_id: @post.id, user_id: current_user&.id)
   end
 
   def new
@@ -32,6 +32,6 @@ class Web::PostsController < Web::ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :category_id, :creator_id)
+    params.require(:post).permit(:title, :body, :category_id)
   end
 end
