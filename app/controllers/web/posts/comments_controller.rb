@@ -3,7 +3,7 @@
 class Web::Posts::CommentsController < Web::ApplicationController
   before_action :authenticate_user!, only: %i[create]
   def create
-    @post = Post.find(post_params)
+    @post = Post.find(params[:post_id])
     @comment = current_user.comments.build(comment_params)
     @comment.post = @post
     if @comment.save
@@ -21,9 +21,5 @@ class Web::Posts::CommentsController < Web::ApplicationController
 
   def comment_params
     params.require(:post_comment).permit(:content, :parent_id)
-  end
-
-  def post_params
-    params.require(:post_id)
   end
 end
