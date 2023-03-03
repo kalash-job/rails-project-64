@@ -23,13 +23,13 @@
 #  creator_id   (creator_id => users.id)
 #
 one:
-  title: one
-  body: First body
+  title: <%= Faker::Lorem.paragraph_by_chars(number: 5) %>
+  body: <%= Faker::Lorem.paragraph_by_chars(number: 4000) %>
   creator: one
   category: one
 
 two:
-  title: two
-  body: Second body
+  title: <%= Faker::Lorem.paragraph_by_chars(number: 255) %>
+  body: <%= Faker::Lorem.paragraph_by_chars(number: 200) %>
   creator: two
   category: two

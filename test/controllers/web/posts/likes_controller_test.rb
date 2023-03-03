@@ -2,9 +2,7 @@
 
 require 'test_helper'
 
-class Web::LikesControllerTest < ActionDispatch::IntegrationTest
-  include Devise::Test::IntegrationHelpers
-
+class Web::Posts::LikesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @post = posts(:two)
     @user = users(:one)

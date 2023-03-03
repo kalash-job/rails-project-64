@@ -2,9 +2,7 @@
 
 require 'test_helper'
 
-class Web::CommentsControllerTest < ActionDispatch::IntegrationTest
-  include Devise::Test::IntegrationHelpers
-
+class Web::Posts::CommentsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @post = posts(:one)
     @parent_comment = post_comments(:nested)
@@ -16,6 +14,7 @@ class Web::CommentsControllerTest < ActionDispatch::IntegrationTest
     @searching_attrs = {
       content:,
       user_id: users(:one).id,
+      ancestry: "#{post_comments(:with_comments).id}/#{@parent_comment.id}",
       post_id: @post.id
     }
   end
@@ -26,10 +25,6 @@ class Web::CommentsControllerTest < ActionDispatch::IntegrationTest
     comment = PostComment.find_by(@searching_attrs)
 
     assert { comment }
-    assert { @parent_comment.parent_of?(comment) }
-    assert { post_comments(:with_comments).root_of?(comment) }
-    assert { post_comments(:deep_nested).sibling_of?(comment) }
-
     assert_redirected_to post_url(@post)
   end
 

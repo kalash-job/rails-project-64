@@ -18,8 +18,8 @@
 #
 one:
   email: first@ya.ru
-  encrypted_password: First231
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 two:
   email: second@ya.ru
-  encrypted_password: Second123
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
