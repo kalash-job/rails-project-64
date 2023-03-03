@@ -25,7 +25,7 @@
 #
 class PostComment < ApplicationRecord
   has_ancestry
-  belongs_to :post, class_name: 'Post', inverse_of: :comments
+  belongs_to :post, class_name: 'Post', inverse_of: :comments, counter_cache: :comments_count
   belongs_to :user, inverse_of: :comments
 
   validates :content, length: { in: 5..400 }, allow_blank: true

@@ -2,13 +2,15 @@
 #
 # Table name: posts
 #
-#  id          :integer          not null, primary key
-#  body        :text
-#  title       :string
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#  category_id :integer          not null
-#  creator_id  :integer          not null
+#  id             :integer          not null, primary key
+#  body           :text
+#  comments_count :integer          default(0), not null
+#  likes_count    :integer          default(0), not null
+#  title          :string
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  category_id    :integer          not null
+#  creator_id     :integer          not null
 #
 # Indexes
 #

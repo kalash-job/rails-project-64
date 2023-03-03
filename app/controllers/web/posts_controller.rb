@@ -3,7 +3,7 @@
 class Web::PostsController < Web::ApplicationController
   before_action :authenticate_user!, only: %i[new create]
   def index
-    @posts = Post.by_creation_date_desc.page(params[:page])
+    @posts = Post.includes(:creator).by_creation_date_desc.page(params[:page])
   end
 
   def show
